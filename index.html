@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+<center>
+<img src="randompng1.jpg" id ='1'>
+</center>
+<center>
+<button onclick="left()"><img src="leftarrow.png" width="60"></button>
+<button onclick="right()"><img src="rightarrow.jpg" width="60"></button>
+</center>
+</body>
+<script>
+    let i = 1;
+    setInterval(()=>{
+        right()
+    },10000)
+    let left = ()=>{
+        i = i - 1;
+        if(i < 1){
+            i = 2;
+        }
+        console.log(i)
+        if(i === 1){
+            document.getElementById('1').src = 'randompng2.jpg'
+        }
+        else if(i === 2){
+            document.getElementById('1').src = 'randompng1.jpg'
+        }
+    }
+    let right = ()=>{
+        i = i + 1;
+        if(i > 2) {
+            i = 1;
+        }
+        console.log(i)
+            if(i === 1){
+            document.getElementById('1').src = 'randompng2.jpg'
+        }
+        else if(i === 2){
+            document.getElementById('1').src = 'randompng1.jpg'
+        }
+    }
+</script>
+</html>
